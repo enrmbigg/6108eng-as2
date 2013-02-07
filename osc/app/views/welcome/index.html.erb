@@ -1,0 +1,70 @@
+ <body>
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+      <!--div class="page-header"-->
+      
+        <h1>Merseyside's Biggest Skiing Facilty!!</h1><br>
+        <p>The Oval Ski Club is based at the dry ski slope, located towards the rear of the Oval Sports Centre, Bebington, Wirral. For more information on locality of the skiing club please visit the Contact Us page. We offer skiing tuition for all ages, an active social club promoting various events through out the year, and also a Ski Racing Team which all members are welcome to join. We are ideally located for the Wirral, Cheshire, Liverpool and Merseyside areas.</p>
+       
+        
+      </div>
+
+
+<div class="container">
+      
+      <div class="row-fluid">
+         <ul class="thumbnails">
+  
+    </div>
+  </li>
+  <div class="row-fluid">
+    <div class="span5">
+    <li class="span12">
+      
+    
+      <div class="well">
+      <img src="../assets\skiing.jpg" alt="Epic Skiing">
+      <h3>Never skiied before? Don't let this stop you joining the club!</h3>
+      <p>We provide lessons through out the season to all of our club members including people who have never skied before. For complete beginners these blocks of lessons start approx. every three weeks - see list below for starting dates. So if you are new to skiing and interested in joining the club then just turn up early on the starting date to enroll!!</p>
+    </div>
+    
+  </div>
+    </fluid>
+<!--div class="row-inline"-->
+<div class="container">
+  <div class="row-fluid">
+      <div class="span5 offset1">
+        <div class="well">
+          <h2>Annoucments</h2>
+          <dl>
+          <% @annoucements.each do |annoucement| %>
+  
+    <dt><%= annoucement.title %></dt>
+    <dd><%= annoucement.body %></dd>
+    <dd><%= annoucement.date %></dd>
+    </br>
+
+  
+<% end %>
+</dl>
+        </div>
+<div class="well">
+          <h2>Events</h2>
+          <ul>
+           <% @events.each do |event| %>
+  
+    <li><%= link_to event.title, event_path(event) %></li>
+   
+    </br>
+    <% end %>
+           </ul>
+
+        </div>
+        </div>
+      </div>
+      </div>
+      </div>
+        </div>
+      </div>

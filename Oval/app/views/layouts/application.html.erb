@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Oval" %></title>
     <%= csrf_meta_tags %>
+    <p class="flash"><%= flash.notice %></p>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -52,33 +53,33 @@
                 <a href="../articles/contactus" accesskey="2">Contact Us</a>
               </li>
               <li class="">
-                <a href="../events/event" accesskey="3">Social Events</a>
+                <a href="../events" accesskey="3">Social Events & Annoucements</a>
               </li>
-              <li class="">
-                 <a href="../events/annoucment" accesskey="4">Announcements</a>
-             
+                         
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
-    <p></p>
-  <body>
+    <br></br>
+      <body>
 
    
 
     <div class="container">
         <div class="row">
           <div class="span9">
-            <%= bootstrap_flash %>
+            
             <%= yield %>
           </div>
          
-        </div><!--/row-->
+        </div>
+      </div><!--/row-->
 <div class="container">
       <footer>
         <hr>
         <p>&copy; Oval Ski Club, Oval Sports Centre, Bebington, Wirral, Liverpool, Merseyside, CH63 7LF</p>
+        <p>By Michael Biggs</p>
       </footer>
 
     </div> <!-- /container -->
@@ -86,7 +87,7 @@
     <!-- Javascripts
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <%= javascript_include_tag "bootstrap" %>
+   <!-- <%= javascript_include_tag "bootstrap" %> -->
 
   </body>
 </html>

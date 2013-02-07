@@ -1,0 +1,36 @@
+<div class="container">
+      <div class="well">
+     <div class="leaderboard"> 
+<p id="notice"><%= notice %></p>
+
+<h1>
+
+  <%= @annoucement.title %>
+</h1>
+  </div>
+    </div>
+  </div>
+    <div class="container">
+  <div class="well">
+<p>
+ 
+  <%= @annoucement.body %>
+</p>
+ </div>
+  </div>
+
+<div class="container">
+  <div class="well">
+<p>
+ 
+  <%= @annoucement.date %>
+</p>
+</div>
+  </div>
+<div class="container">
+  <div class="well">
+
+<%= link_to 'Edit', edit_annoucement_path(@annoucement) %> |
+<%= link_to 'Back', annoucements_path %>
+ </div>
+  </div>

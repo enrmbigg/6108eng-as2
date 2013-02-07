@@ -1,0 +1,83 @@
+
+<div class="container">
+      <div class="well">
+     <div class="leaderboard">     
+        <h1>Annoucements</h1>
+
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+      <div class="well">
+      <div id="myCarousel" class="carousel slide">
+        <!--Carousel items -->
+        <div class="carousel-inner">
+          <div class="active item">
+            <img src="../assets/skiing2.jpg" alt="Spiral Staircase">
+            <div class="carousel-caption">
+              <h4>Lovely Scenery</h4>
+              <p>just one of the amazing scenes captured while skiing!!</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../assets/skiing1.jpg" alt="Lovely Decor">
+            <div class="carousel-caption">
+              <h4>Epic Skiing</h4>
+              <p>Some things to expect once you start to handle the fast paced life of a skiier.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../assets/skilodge2.gif" alt="Scenery">
+            <div class="carousel-caption">
+              <h4>What a view!!</h4>
+              <p>Was a very beautiful location right up within the mountains.</p>
+            </div>
+
+          </div>
+          
+        </div>
+        <!-- Carousel nav -->
+         <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+  <div class="well">
+    <ul>
+<table>
+  <tr>
+    <th>Title</th>
+     <th></th>
+    <th>Body</th>
+     <th></th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @annoucements.each do |annoucement| %>
+  <tr>
+    <td><%= annoucement.title %></td>
+    <td>|</td>
+    <td><%= annoucement.body %></td>
+    <td>|</td>
+    <td><%= annoucement.date %></td>
+    <td>|</td>
+    <td><%= link_to 'Show', annoucement %></td>
+    <td>|</td>
+    <td><%= link_to 'Edit ', edit_annoucement_path(annoucement) %></td><td>|</td>
+    <td><%= link_to 'Destroy ', annoucement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Annoucement', new_annoucement_path %></ul>
+
+</div>
+</div>

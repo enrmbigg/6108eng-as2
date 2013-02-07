@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Oval Ski Club</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <p class="flash"><%= flash.notice %></p>
+  <link href="../assets/bootstrap.css" rel="stylesheet">
+  <link href="../assets/bootstrap.js" rel="javascript">
+
+</head>
+   <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="../welcome/index"><img src="../assets/osc.png" alt="Oval Ski Club"></a>
+          <div class="container nav-collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="../welcome/aboutus" accesskey="1">About Us</a>
+              </li>
+              <li class="">
+                <a href="../welcome/contactus" accesskey="2">Contact Us</a>
+              </li>
+              <li class="">
+                <a href="../events/index" accesskey="3">Social Events</a>
+              </li>
+              <li class="">
+                <a href="../annoucements/index" accesskey="4">Annoucements</a>
+              </li>
+              <li class="">
+                <a href="../welcome/club" accesskey="5">Club</a>
+              </li>
+               <li class="">
+                <a href="../welcome/holiday " accesskey="6">Holiday</a>
+              </li>
+              <li class="">
+                <a href="../welcome/login" accesskey="7">Login</a>
+              </li>
+             
+                       
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <br></br>
+<body>
+
+<%= yield %>
+
+<div class="container">
+      <footer>
+        <hr>
+        <p>&copy; Oval Ski Club, Oval Sports Centre, Bebington, Wirral, Liverpool, Merseyside, CH63 7LF</p>
+        <p>By Michael Biggs</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+   
+  </body>
+</html>
+  <!-- Placed at the end of the document so the pages load faster -->
+      <!-- jQuery via Google + local fallback, see h5bp.com -->
+          <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+          <script>window.jQuery || document.write('<script src="assets/js/jquery-1.7.2.min.js"><\/script>')</script>

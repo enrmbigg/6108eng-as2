@@ -1,3 +1,19 @@
-<h1><%= @events.title %></h1>
-<p><%= @events.body %></p>
-<%= link_to "<< Back to Events", events_path %>
+<body>
+<div class="container">
+            <div class="well">
+<h1><%= @event.title %></h1>
+</div>
+</div>
+<div class="container">
+            <div class="well">
+<p><%= @event.body %></p>
+</div>
+</div>
+<div class="container">
+            <div class="well">
+            	<%= link_to "<< Back to Events", events_path %> |
+            	<%= link_to "Edit", edit_event_path(@event) %> |
+            	<%= link_to "Delete", event_path(@event), method: :delete, data: { confirm: 'Are you sure?' } %>
+            	</div>
+</div>
+</body>

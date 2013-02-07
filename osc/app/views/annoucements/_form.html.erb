@@ -1,0 +1,44 @@
+<%= form_for(@annoucement) do |f| %>
+  <% if @annoucement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@annoucement.errors.count, "error") %> prohibited this annoucement from being saved:</h2>
+
+      <ul>
+      <% @annoucement.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="container">
+  <div class="well">
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+   </div>
+  </div>
+  <div class="container">
+  <div class="well">
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </div>
+   </div>
+  </div>
+  <div class="container">
+  <div class="well">
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.datetime_select :date %>
+  </div>
+   </div>
+  </div>
+  <div class="container">
+  <div class="well">
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+ </div>
+  </div>
