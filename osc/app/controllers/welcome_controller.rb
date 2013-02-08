@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
-    @events = Event.all
-    @annoucements = Annoucement.all
+    @events = Event.all.reverse
+    @annoucements = Annoucement.all.reverse
   end
 
   def contactus

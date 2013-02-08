@@ -22,15 +22,20 @@
 <div class="container">
   <div class="well">
 <p>
- 
+  <%= button_to 'Edit', edit_annoucement_path(@annoucement),:id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get  %>
+        <span class="badge badge-success"><%= @annoucement.created_at.strftime("%m/%d/%Y %H:%M")%></span>
+    <span class="badge badge-label"><%= @annoucement.updated_at.strftime("%m/%d/%Y %H:%M")%></span>
   <%= @annoucement.date %>
+
+
 </p>
 </div>
   </div>
 <div class="container">
   <div class="well">
 
-<%= link_to 'Edit', edit_annoucement_path(@annoucement) %> |
-<%= link_to 'Back', annoucements_path %>
+<%= button_to 'Back', annoucements_path,:id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get  %>
  </div>
   </div>

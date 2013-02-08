@@ -15,12 +15,17 @@
 <p>
   
   <%= @event.body %>
+</br>
+<%= button_to 'Edit', edit_event_path(@event),:id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get  %>
+       <span class="badge badge-success"><%= @event.created_at.strftime("%m/%d/%Y %H:%M")%></span>
+    <span class="badge badge-label"><%= @event.updated_at.strftime("%m/%d/%Y %H:%M")%></span>
 </p>
  </div>
     </div>
 <div class="container">
   <div class="well">
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= button_to 'Back', events_path,:id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get  %>
     </div>
 

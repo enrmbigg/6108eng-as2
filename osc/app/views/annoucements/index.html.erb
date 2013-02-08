@@ -48,36 +48,34 @@
   <div class="well">
     <ul>
 <table>
-  <tr>
-    <th>Title</th>
-     <th></th>
-    <th>Body</th>
-     <th></th>
-    <th>Date</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+ 
 <% @annoucements.each do |annoucement| %>
   <tr>
     <td><%= annoucement.title %></td>
     <td>|</td>
     <td><%= annoucement.body %></td>
     <td>|</td>
-    <td><%= annoucement.date %></td>
-    <td>|</td>
-    <td><%= link_to 'Show', annoucement %></td>
-    <td>|</td>
-    <td><%= link_to 'Edit ', edit_annoucement_path(annoucement) %></td><td>|</td>
-    <td><%= link_to 'Destroy ', annoucement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+   <td> <span class="badge badge-success"><%= annoucement.created_at.strftime("%m/%d/%Y %H:%M")%></span></td>
+   <td> <span class="badge badge-label"><%= annoucement.updated_at.strftime("%m/%d/%Y %H:%M")%></span></td>
+  </br>
+  </table>
+  <table>
+    <td><%= button_to 'Show', annoucement,:id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get %></td>
+    
+    <td><%= button_to 'Edit ', edit_annoucement_path(annoucement),:id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get  %></td>
+    <td><%= button_to 'Destroy ', annoucement,:id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr></table>
+  <hr>
 <% end %>
-</table>
+
 
 <br />
 
-<%= link_to 'New Annoucement', new_annoucement_path %></ul>
+<%= button_to 'New Annoucement', new_annoucement_path,:id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get  %></ul>
 
 </div>
 </div>

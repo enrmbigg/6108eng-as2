@@ -1,3 +1,3 @@
 class Annoucement < ActiveRecord::Base
-  attr_accessible :body, :date, :title
+  attr_accessible :body, :title
 end

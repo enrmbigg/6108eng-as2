@@ -47,6 +47,7 @@
 <div class="container">
   <div class="well">
 <ul>
+
 <% @events.each do |event| %>
   
     <li>
@@ -54,20 +55,32 @@
     
     <%= event.body %>
     <br/>
-    <%= link_to 'Show', event %>
-    
-    <%= link_to 'Edit', edit_event_path(event) %>
-    
-    <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </li>
+      </br>
+      <span class="badge badge-success"><%= event.created_at.strftime("%m/%d/%Y %H:%M")%></span>
+    <span class="badge badge-label"><%= event.updated_at.strftime("%m/%d/%Y %H:%M")%></span>
+  </br>
+    <table>
+      </br>
+      <tr>
+    <td><%= button_to 'Show', event, :id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get %></td>
+    <td><%= button_to 'Edit', edit_event_path(event), :id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get %></td>
 
+    <td><%= button_to 'Destroy', event,:id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  
+  </tr></table>
+  </li>
+<hr>
 <% end %>
 </ul>
 
 <br/>
 <ul>
-<%= link_to 'New Event', new_event_path %>
-</ul>
+<%= button_to 'New Event', new_event_path,:id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get %>
+    </ul>
  </div>
   </div>
 <div class="container">

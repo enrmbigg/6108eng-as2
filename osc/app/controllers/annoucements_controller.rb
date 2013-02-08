@@ -2,7 +2,7 @@ class AnnoucementsController < ApplicationController
   # GET /annoucements
   # GET /annoucements.json
   def index
-    @annoucements = Annoucement.all
+    @annoucements = Annoucement.all.reverse
 
     respond_to do |format|
       format.html # index.html.erb

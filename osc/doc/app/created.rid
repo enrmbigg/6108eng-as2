@@ -1,0 +1,12 @@
+Fri, 08 Feb 2013 12:41:11 +0000
+doc/README_FOR_APP	Thu, 07 Feb 2013 11:36:41 +0000
+app/controllers/annoucements_controller.rb	Fri, 08 Feb 2013 11:22:01 +0000
+app/controllers/application_controller.rb	Thu, 07 Feb 2013 11:36:41 +0000
+app/controllers/events_controller.rb	Fri, 08 Feb 2013 12:02:03 +0000
+app/controllers/welcome_controller.rb	Thu, 07 Feb 2013 14:39:00 +0000
+app/helpers/annoucements_helper.rb	Thu, 07 Feb 2013 12:40:01 +0000
+app/helpers/application_helper.rb	Thu, 07 Feb 2013 11:36:41 +0000
+app/helpers/events_helper.rb	Thu, 07 Feb 2013 11:39:32 +0000
+app/helpers/welcome_helper.rb	Thu, 07 Feb 2013 11:40:34 +0000
+app/models/annoucement.rb	Fri, 08 Feb 2013 12:19:22 +0000
+app/models/event.rb	Fri, 08 Feb 2013 12:01:56 +0000
